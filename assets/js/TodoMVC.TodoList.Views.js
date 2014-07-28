@@ -113,6 +113,7 @@ TodoMVC.module('TodoList.Views', function (Views, App, Backbone, Marionette, $) 
 
     App.vent.on('todoList:filter', function (filter) {
         filter = filter || 'all';
+
         $('#todoapp').attr('class', 'filter-' + filter);
     });
 });

@@ -23,6 +23,7 @@ TodoMVC.module('TodoList', function (TodoList, App, Backbone, Marionette, $, _) 
             var header = new App.Layout.Header({
                 collection: todoList
             });
+
             App.header.show(header);
         },
 
@@ -30,6 +31,7 @@ TodoMVC.module('TodoList', function (TodoList, App, Backbone, Marionette, $, _) 
             var footer = new App.Layout.Footer({
                 collection: todoList
             });
+
             App.footer.show(footer);
         },
 
@@ -46,6 +48,7 @@ TodoMVC.module('TodoList', function (TodoList, App, Backbone, Marionette, $, _) 
 
     TodoList.addInitializer(function () {
         var controller = new TodoList.Controller();
+
         controller.router = new TodoList.Router({
             controller: controller
         });
